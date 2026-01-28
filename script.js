@@ -1,5 +1,10 @@
-const button = document.querySelector("button");
+const form = document.getElementById("contact-form");
+const message = document.getElementById("message");
 
-button.addEventListener("click", () => {
-  alert("You clicked the button! 🎉");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+
+  message.textContent = `Thanks, ${name}! Your message was sent 🚀`;
 });
